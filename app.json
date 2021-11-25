@@ -9,7 +9,7 @@
         "pyrogram"
     ],
     "website": "https://t.me/amortmusic",
-    "repository": "https://github.com/",
+    "repository": "https://github.com/RAZANALYAFAE/AQANI",
     "success_url": "https://t.me/hama_refaat",
     "env": {
         "API_ID": {
