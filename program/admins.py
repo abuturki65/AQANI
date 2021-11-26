@@ -152,7 +152,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **تم كتمي**\n\n• **لرفع الكتم استخدم**\n» /unmute الامر"
+                "🔇 **تم كتم الصوت**\n\n• **لرفع الكتم استخدم**\n» /unmute الامر"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -170,7 +170,7 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "🔊 **تم رفع الكتم**\n\n• **لكم الصوت استخدم**\n» /mute الامر"
+                "🔊 **تم رفع الكتم**\n\n• **لكتم الصوت استخدم**\n» /mute الامر"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -249,7 +249,7 @@ async def cbmute(_, query: CallbackQuery):
         try:
             await call_py.mute_stream(chat_id)
             await query.edit_message_text(
-                "🔇 سم انكتمت", reply_markup=bttn
+                "🔇 تم ايقاف الصوت", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **خطاء:**\n\n`{e}`", reply_markup=bcl)
@@ -269,7 +269,7 @@ async def cbunmute(_, query: CallbackQuery):
         try:
             await call_py.unmute_stream(chat_id)
             await query.edit_message_text(
-                "🔊 واخيرآ يمدي اسولف", reply_markup=bttn
+                "🔊 تم تشغيل الصوت", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **خطاء:**\n\n`{e}`", reply_markup=bcl)
@@ -288,7 +288,7 @@ async def change_volume(client, m: Message):
         try:
             await call_py.change_volume_call(chat_id, volume=int(range))
             await m.reply(
-                f"✅ **ضبط الصوت على** `{range}`%"
+                f"✅ **تم ضبط الصوت على** `{range}`%"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
