@@ -57,8 +57,8 @@ async def play(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton(text="• القائمة", callback_data="cbmenu"),
+                InlineKeyboardButton(text="• إغلاق", callback_data="cls"),
             ]
         ]
     )
@@ -67,7 +67,7 @@ async def play(c: Client, m: Message):
     try:
         aing = await c.get_me()
     except Exception as e:
-        return await m.reply_text(f"error:\n\n{e}")
+        return await m.reply_text(f"خطاء:\n\n{e}")
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
@@ -116,7 +116,7 @@ async def play(c: Client, m: Message):
 
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("📥 **downloading audio...**")
+            suhu = await replied.reply("📥 **جاري تنزيل الصوت...**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -139,7 +139,7 @@ async def play(c: Client, m: Message):
                 )
             else:
              try:
-                await suhu.edit("🔄 **Joining vc...**")
+                await suhu.edit("🔄 **يتم التشغيل...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioPiped(
@@ -189,7 +189,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("🔄 **Joining vc...**")
+                                await suhu.edit("🔄 **يتم التشغيل...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -215,7 +215,7 @@ async def play(c: Client, m: Message):
                 "» reply to an **audio file** or **give something to search.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "🔎 **Searching...**")
+            suhu = await c.send_message(chat_id, "🔎 **جاري البحث...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -240,7 +240,7 @@ async def play(c: Client, m: Message):
                         )
                     else:
                         try:
-                            await suhu.edit("🔄 **Joining vc...**")
+                            await suhu.edit("🔄 **يتم التشغيل...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
