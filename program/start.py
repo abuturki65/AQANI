@@ -81,7 +81,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧠 ثقف عقلك ", url="https://t.me/SULHB"
+                        "🧠 ثقف عقلك", url="https://t.me/amortmusic"
                     )
                 ],
             ]
