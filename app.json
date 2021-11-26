@@ -1,7 +1,7 @@
 {
     "name": "Video x Music Stream Bot",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
-    "logo": "https://telegra.ph/file/1c41ded2dd871eb36bd7e.png",
+    "logo": "https://telegra.ph/file/06b651dc0d827b6887764.jpg",
     "keywords": [
         "pytgcalls",
         "telegram bot",
@@ -40,29 +40,29 @@
             "description": "fill with the pyrogram String Session",
             "required": true
         },
-        "SUDO_USERS": {
+        "SUDO_ID": {
             "description": "list of user ids to be added to sudo member list, or just fill with your id",
             "required": true
         },
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
-            "value": "kurd_botschat"
+            "value": "CHTLHB"
         },
         "UPDATES_CHANNEL": {
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
-            "value": "amortmusic"
+            "value": "ALRAGIBOT"
         },
         "OWNER_NAME": {
             "description": "fill with your telegram account username without @",
             "required": true,
-            "value": "hama"
+            "value": "PFPFF"
         },
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",
             "required": true,
-            "value": "hama"
+            "value": "𝙼𝚄𝚂𝙸𝙲..🎶"
         }
     },
     "addons": [],
