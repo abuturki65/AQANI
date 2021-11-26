@@ -18,7 +18,7 @@ async def join_group(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except BaseException:
         await message.reply_text(
-            "• **i'm not have permission:**\n\n» ❌ __Add Users__",
+            "• **ليس لدي صلاحيات:**\n\n» ❌ __اضافة المستخدمين__",
         )
         return
 
@@ -34,12 +34,12 @@ async def join_group(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"🛑 Flood Wait Error 🛑 \n\n**userbot couldn't join your group due to heavy join requests for userbot**"
-            "\n\n**or add assistant manually to your Group and try again**",
+            f"🛑 خطأ. الضغط على البوت كثير🛑 \n\n**لم يتمكن حساب المساعد من الانضمام إلى مجموعتك بسبب كثرة طلبات الانضمام **"
+            "\n\n**أو أضف مساعدًا يدويًا إلى مجموعتك وحاول مرة أخرى**",
         )
         return
     await message.reply_text(
-        f"✅ **userbot succesfully entered chat**",
+           f"✅ ** دخل حساب المساعد للمجموعه او القناة بنجاح**",
     )
 
 
