@@ -52,7 +52,8 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **مرحبآ عزيزي↤「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」!**\n
+        f"""
+✨ **مرحبآ عزيزي↤「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」!**\n
 🤖 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) **
 ** يتيح لك تشغيل الموسيقى والفيديو في مجموعات من خلال المكالمات الجديدة في Telegram! **
 💡 ** اكتشف جميع أوامر البوت وكيفية عملها من خلال النقر على زر »📚 الأوامر! **
@@ -62,11 +63,11 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ اضفني الئ مجموعتك ➕",
+                        "➕ اضفني الى مجموعتك ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton(" 📚 دليل الاستخدام", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("📜 دليل الاستخدام", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("📚 الاوامر", callback_data="cbbasic"),
                     InlineKeyboardButton("👮 المطور", url=f"https://t.me/{OWNER_NAME}"),
@@ -81,7 +82,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧠 ثقف عقلك", url="https://t.me/amortmusic"
+                        "🧠 ثقف عقلك", url="https://t.me/sulhb"
                     )
                 ],
             ]
@@ -101,7 +102,7 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ ثقف عقلك", url=f"https://t.me/SULHB"),
+                InlineKeyboardButton("🧠 ثقف عقلك", url=f"https://t.me/sulhb"),
                 InlineKeyboardButton(
                     "📣 قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
